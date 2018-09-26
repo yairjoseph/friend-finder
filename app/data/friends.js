@@ -23,7 +23,7 @@ var friends = [
             1,
             4,
             4,
-            6,
+            3,
             1,
             1,
             5,
@@ -39,19 +39,65 @@ var friends = [
             1,
             4,
             3,
-            8,
+            1,
             4,
             1,
             5,
-            7,
-            6
+            3,
+            2
         ]
     }
-    
+
 ];
 
+var currentInput = [
+    {
+        name: "vernie",
+        photo: "www.vernie.com",
+        scores: [
+            1,
+            5,
+            3,
+            4,
+            2,
+            1,
+            2,
+            1,
+            5,
+            2
+        ]
+    }
+]
+var friendArr = [];
 module.exports = friends;
-
-for(let i = 0; i < friends.length; i++){
-    console.log(friends[i].scores)
+for (var i = 0; i < friends.length; i++) {
+    //   console.log(friends[i].scores);
+    var friendsScore = friends[i].scores;
+    // console.log(friendsScore);
+    var total = 0;
+    for (var g = 0; g < friendsScore.length; g++) {
+        // console.log(friendsScore[g]);
+        total += Math.abs(currentInput[0].scores[g] - friendsScore[g]);
+    }
+    // console.log(total);
+    friendArr.push(total);
 }
+// console.log(friendArr)
+var currentInput = [
+    {
+        name: "",
+        photo: "",
+        scores: [],
+    }
+]
+var p = indexOfSmallest(friendArr);
+
+function indexOfSmallest(a) {
+    var lowest = 0;
+    for (var i = 1; i < a.length; i++) {
+        if (a[i] < a[lowest]) lowest = i;
+    }
+    return lowest;
+}
+
+friends[p].photo
