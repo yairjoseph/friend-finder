@@ -1,0 +1,24 @@
+.jumbotron {
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%
+}
+.divider {
+    border-left: 1px solid black;
+    height: 20px;
+}
+.links {
+    margin-left: 5%;
+}
+.main {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+}
+
+#line {
+    margin-top: 20px;
+    border-top: 1px solid lightgray;
+    width: 100%;
+}

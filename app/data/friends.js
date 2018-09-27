@@ -99,5 +99,5 @@ function indexOfSmallest(a) {
     }
     return lowest;
 }
-
+console.log(p)
 friends[p].photo
