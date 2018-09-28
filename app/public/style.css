@@ -1,8 +1,13 @@
+body{
+    background-color: lemonchiffon;
+}
 .jumbotron {
     margin-top: 2%;
     margin-left: 5%;
     margin-right: 5%;
-    margin-bottom: 2%
+    margin-bottom: 2%;
+    width: 30%;
+    background-color: white;
 }
 .divider {
     border-left: 1px solid black;
@@ -23,7 +28,4 @@
     width: 100%;
 }
 
-#ugly-image {
-    width:50%;
-    height: 50%;
-}
+
