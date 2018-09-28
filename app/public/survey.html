@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
 
@@ -262,8 +263,8 @@
             </div>
         </div>
     </div>
-        <!-- Bootstrap JavaScript Bundle -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl"
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl"
         crossorigin="anonymous"></script>
     <script>
 
@@ -304,10 +305,10 @@
             currentInput.scores.push(dropAnswer8)
             currentInput.scores.push(dropAnswer9)
             currentInput.scores.push(dropAnswer10)
-            console.log(currentInput)
+            // console.log(currentInput)
 
             $.get("/api/friends", function (friends) {
-                console.log(friends)
+                // console.log(friends)
 
                 var friendArr = [];
                 for (var i = 0; i < friends.length; i++) {
@@ -329,10 +330,10 @@
                 var friendImage = friends[p].photo;
                 var friendName = friends[p].name;
                 $(".modal-body").text(friendName)
-                var x = $(`<br> <img src=${friendImage} id="ugly-image">`)
-                $(".modal-body").append(x);
-                console.log(friendImage)
-                console.log(friendName)        
+                var friendImageURL = $(`<br> <img src=${friendImage} id="ugly-image">`)
+                $(".modal-body").append(friendImageURL);
+                // console.log(friendImage)
+                // console.log(friendName)
                 function indexOfSmallest(a) {
                     var lowest = 0;
                     for (var i = 1; i < a.length; i++) {
@@ -342,6 +343,7 @@
                         return lowest;
                     }
                 };
+                $.post("api/friends", currentInput)
             });
         });
 
