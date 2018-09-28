@@ -22,3 +22,8 @@
     border-top: 1px solid lightgray;
     width: 100%;
 }
+
+#ugly-image {
+    width:50%;
+    height: 50%;
+}
