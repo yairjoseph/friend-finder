@@ -334,8 +334,10 @@
                     }
                 };
                 $.post("api/friends", currentInput);
-                res.redirect('/');
 
+                $(document.body).click(function () {
+                    location.href = "/";
+                });
             });
         });
 
