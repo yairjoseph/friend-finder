@@ -32,3 +32,7 @@ body{
     width:50%;
     height: 50%;
 }
+
+.modal-body {
+    width:190%;
+}

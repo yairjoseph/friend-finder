@@ -232,7 +232,7 @@
             </div>
             <div id="line"></div>
             <br>
-            <button data-toggle="modal" data-target="#exampleModal" type="submit" id="submit-btn" class="btn btn-primary btn-lg btn-block">Submit</button>
+            <button data-toggle="modal" data-target="#exampleModal" type="submit" id="submit-btn" class="btn btn-outline-primary btn-lg btn-block">Submit</button>
         </form>
     </div>
     </div>
@@ -240,7 +240,7 @@
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Your Match!</h5>
@@ -319,7 +319,7 @@
                 console.log(p)
                 var friendImage = friends[p].photo;
                 var friendName = friends[p].name;
-                $(".modal-body").text(friendName)
+                $(".modal-body").html(`<h1>${friendName}</h1>`)
                 var friendImageURL = $(`<br> <img src=${friendImage} id="ugly-image">`)
                 $(".modal-body").append(friendImageURL);
                 // console.log(friendImage)
@@ -340,12 +340,6 @@
                 });
             });
         });
-
-
-
-
-
-
     </script>
 </body>
 
